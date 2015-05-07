@@ -82,7 +82,59 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		//---------------------------------------------------------- 
+
+	
+
+		 Button b4=(Button) findViewById(R.id.btn_4);
 		 
+		 b4.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				TextView tv=(TextView)findViewById(R.id.num_disp);
+				String four="4";
+				String s1=(String)tv.getText();
+				tv.setText(s1+four);
+				
+			}
+		});
+
+		//---------------------------------------------------------- 
+
+
+ Button b5=(Button) findViewById(R.id.btn_5);
+		 
+		 b5.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				TextView tv=(TextView)findViewById(R.id.num_disp);
+				String five="5";
+				String s1=(String)tv.getText();
+				tv.setText(s1+five);
+				
+			}
+		});
+
+		//---------------------------------------------------------- 
+
+ Button b6=(Button) findViewById(R.id.btn_6);
+		 
+		 b6.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				TextView tv=(TextView)findViewById(R.id.num_disp);
+				String six="6";
+				String s1=(String)tv.getText();
+				tv.setText(s1+six);
+				
+			}
+		});
+
+		//---------------------------------------------------------- 
+
 		 
 	 Button b7=(Button) findViewById(R.id.btn_7);
 	 
@@ -97,6 +149,42 @@ public class MainActivity extends Activity {
 			
 		}
 	});
+	 
+		//----------------------------------------------------------
+	 Button b8=(Button) findViewById(R.id.btn_8);
+	 
+	 b8.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			TextView tv=(TextView)findViewById(R.id.num_disp);
+			String eight="8";
+			String s1=(String)tv.getText();
+			tv.setText(s1+eight);
+			
+		}
+	});
+	 
+	 Button b9=(Button) findViewById(R.id.btn_9);
+	 
+	 b9.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			TextView tv=(TextView)findViewById(R.id.num_disp);
+			String nine="9";
+			String s1=(String)tv.getText();
+			tv.setText(s1+nine);
+			
+		}
+	});
+
+	//---------------------------------------------------------- 
+
+
+ 
+
+	 
 	 
 	}
 
