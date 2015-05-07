@@ -2,10 +2,12 @@ package com.example.first_android_project;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -181,6 +183,22 @@ public class MainActivity extends Activity {
 
 	//---------------------------------------------------------- 
 
+	 Button pluse=(Button) findViewById(R.id.btn_plus);
+	 
+	 pluse.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			TextView tv=(TextView)findViewById(R.id.num_disp);
+			if(tv.getText()!=""){
+			String num1=(String)tv.getText();
+			Toast.makeText(MainActivity.this, num1, Toast.LENGTH_LONG).show();
+			tv.setText("");
+			}
+		}
+	});
+
+	//---------------------------------------------------------- 
 
  
 
