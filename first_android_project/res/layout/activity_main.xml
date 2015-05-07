@@ -248,20 +248,20 @@
                     android:text="3" />
 
                 <Button
+                    android:id="@+id/btn_dote"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
-                    android:text="-"
-                    android:id="@+id/button24"
+                    android:layout_column="3"
                     android:layout_row="4"
-                    android:layout_column="3" />
+                    android:text="-" />
 
                 <Button
+                    android:id="@+id/btn_eql"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
-                    android:text="="
-                    android:id="@+id/button25"
+                    android:layout_column="4"
                     android:layout_row="4"
-                    android:layout_column="4" />
+                    android:text="=" />
 
                 <Button
                     android:id="@+id/btn_0"

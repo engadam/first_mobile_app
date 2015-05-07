@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	private String num1,num2;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -191,7 +192,7 @@ public class MainActivity extends Activity {
 		public void onClick(View v) {
 			TextView tv=(TextView)findViewById(R.id.num_disp);
 			if(tv.getText()!=""){
-			String num1=(String)tv.getText();
+			num1=(String)tv.getText();
 			Toast.makeText(MainActivity.this, num1, Toast.LENGTH_LONG).show();
 			tv.setText("");
 			}
@@ -200,7 +201,22 @@ public class MainActivity extends Activity {
 
 	//---------------------------------------------------------- 
 
- 
+Button eql=(Button) findViewById(R.id.btn_eql);
+	 
+	 eql.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			TextView tv=(TextView)findViewById(R.id.num_disp);
+			num2=(String)tv.getText();
+			double intnum1=Double.parseDouble(num1);
+			double intnum2=Double.parseDouble(num2);
+			double total=intnum1+intnum2;
+			String t=String.valueOf(total);
+			tv.setText(t);
+			}
+		
+	});
 
 	 
 	 
