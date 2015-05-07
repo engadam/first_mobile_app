@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	private String num1,num2;
+	private char p;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -210,14 +211,22 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			num2=(String)tv.getText();
 			double intnum1=Double.parseDouble(num1);
 			double intnum2=Double.parseDouble(num2);
-			double total=intnum1+intnum2;
+			double sum=0;
+			//--
+			switch (p){
+			
+			
+			}
+			sum=intnum1+intnum2;
+			}
 			double dtotal;
-			int inttotal=(int)total;
+			
+			int inttotal=(int)sum;
 			dtotal=inttotal;
-			String t=String.valueOf(total);
+			String t=String.valueOf(sum);
 			String t2=String.valueOf(inttotal);
 			//----
-			if((total-dtotal)==0){
+			if((sum-dtotal)==0){
 				// display integer number if the total are integer
 					tv.setText(t2);
 			}else{
