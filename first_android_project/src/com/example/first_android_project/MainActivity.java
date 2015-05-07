@@ -10,9 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	private int count;
 	private String num1,num2;
 	private char p;
+	private boolean equal_press=false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -30,6 +31,11 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+					equal_press=false;
+				}
+				
 				String zero="0";
 				String s1=(String)tv.getText();
 				tv.setText(s1+zero);
@@ -46,6 +52,10 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+					equal_press=false;
+				}
 				String one="1";
 				String s1=(String)tv.getText();
 				tv.setText(s1+one);
@@ -62,6 +72,10 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+					equal_press=false;
+				}
 				String two="2";
 				String s1=(String)tv.getText();
 				tv.setText(s1+two);
@@ -79,7 +93,11 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+				}
 				String three="3";
+				equal_press=false;
 				String s1=(String)tv.getText();
 				tv.setText(s1+three);
 				
@@ -97,6 +115,10 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+					equal_press=false;
+				}
 				String four="4";
 				String s1=(String)tv.getText();
 				tv.setText(s1+four);
@@ -114,9 +136,13 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+				}
 				String five="5";
 				String s1=(String)tv.getText();
 				tv.setText(s1+five);
+				equal_press=false;
 				
 			}
 		});
@@ -130,6 +156,10 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+					equal_press=false;
+				}
 				String six="6";
 				String s1=(String)tv.getText();
 				tv.setText(s1+six);
@@ -147,6 +177,10 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			TextView tv=(TextView)findViewById(R.id.num_disp);
+			if (equal_press==true){
+				tv.setText("");
+				equal_press=false;
+			}
 			String sevn="7";
 			String s1=(String)tv.getText();
 			tv.setText(s1+sevn);
@@ -162,6 +196,10 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			TextView tv=(TextView)findViewById(R.id.num_disp);
+			if (equal_press==true){
+				tv.setText("");
+				equal_press=false;
+			}
 			String eight="8";
 			String s1=(String)tv.getText();
 			tv.setText(s1+eight);
@@ -176,6 +214,10 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			TextView tv=(TextView)findViewById(R.id.num_disp);
+			if (equal_press==true){
+				tv.setText("");
+				equal_press=false;
+			}
 			String nine="9";
 			String s1=(String)tv.getText();
 			tv.setText(s1+nine);
@@ -195,11 +237,65 @@ public class MainActivity extends Activity {
 			if(tv.getText()!=""){
 			num1=(String)tv.getText();
 			tv.setText("");
+			p='+';
 			}
 		}
 	});
 
-	//---------------------------------------------------------- 
+	//----------------------------------------------------------
+	 
+Button sub=(Button) findViewById(R.id.btn_sub);
+	 
+	 sub.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			TextView tv=(TextView)findViewById(R.id.num_disp);
+			if(tv.getText()!=""){
+			num1=(String)tv.getText();
+			tv.setText("");
+			p='-';
+			}
+		}
+	});
+
+	 
+		//----------------------------------------------------------
+	 
+	 Button multi=(Button) findViewById(R.id.btn_multi);
+	 	 
+	 	 multi.setOnClickListener(new View.OnClickListener() {
+	 		
+	 		@Override
+	 		public void onClick(View v) {
+	 			TextView tv=(TextView)findViewById(R.id.num_disp);
+	 			if(tv.getText()!=""){
+	 			num1=(String)tv.getText();
+	 			tv.setText("");
+	 			p='*';
+	 			}
+	 		}
+	 	});
+	 
+	 	//----------------------------------------------------------
+		 
+		 Button div=(Button) findViewById(R.id.btn_div);
+		 	 
+		 	 multi.setOnClickListener(new View.OnClickListener() {
+		 		
+		 		@Override
+		 		public void onClick(View v) {
+		 			TextView tv=(TextView)findViewById(R.id.num_disp);
+		 			if(tv.getText()!=""){
+		 			num1=(String)tv.getText();
+		 			tv.setText("");
+		 			p='/';
+		 			}
+		 		}
+		 	});
+		 
+	 
+	 //-------------------------------------------------------
 
 Button eql=(Button) findViewById(R.id.btn_eql);
 	 
@@ -212,29 +308,91 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			double intnum1=Double.parseDouble(num1);
 			double intnum2=Double.parseDouble(num2);
 			double sum=0;
-			//--
-			switch (p){
-			
-			
-			}
-			sum=intnum1+intnum2;
-			}
 			double dtotal;
-			
 			int inttotal=(int)sum;
-			dtotal=inttotal;
-			String t=String.valueOf(sum);
-			String t2=String.valueOf(inttotal);
-			//----
-			if((sum-dtotal)==0){
+			String t;
+			String t2;
+			equal_press=true;
+			//--
+			switch (p)
+			{
+				case '+' :
+				sum=intnum1+intnum2;
+				inttotal=(int)sum;
+				dtotal=inttotal;
+				t=String.valueOf(sum);
+				t2=String.valueOf(inttotal);
+				//----
+				if((sum-dtotal)==0){
 				// display integer number if the total are integer
 					tv.setText(t2);
-			}else{
+				}else{
 				// display double number if the total are double
 					tv.setText(t);
 				}
+				break; 
+			
+			case '-':
+				sum=intnum1-intnum2;
+				inttotal=(int)sum;
+				dtotal=inttotal;
+				t=String.valueOf(sum);// change to sum to string
+				t2=String.valueOf(inttotal);
+				//----
+				if((sum-dtotal)==0){
+				// display integer number if the total are integer
+					tv.setText(t2);
+				}else{
+				// display double number if the total are double
+					tv.setText(t);
+				}
+				break; 
+				
+			case '*':
+				sum=intnum1*intnum2;
+				inttotal=(int)sum;
+				dtotal=inttotal;
+				
+				t=String.valueOf(sum);// change to sum to string
+				t2=String.valueOf(inttotal);
+				
+				//----
+				if((sum-dtotal)==0){
+				// display integer number if the total are integer
+					tv.setText(t2);
+				}else{
+				// display double number if the total are double
+					tv.setText(t);
+				}
+				break; 
+
+			case '/':
+				sum=intnum1/intnum2;
+				inttotal=(int)sum;	
+				dtotal=inttotal;
+				
+				t=String.valueOf(sum);// change to sum to string
+				
+				t2=String.valueOf(inttotal);
+				//----
+				if((sum-dtotal)==0){
+				// display integer number if the total are integer
+					tv.setText(t2);
+				}else{
+				// display double number if the total are double
+					tv.setText(t);
+				}
+				break; 
+
+				
+			}//switch end 
+			
+			p=' ';
+		
 			}
 		
+		
+		    
 	 	});
 
 	 
