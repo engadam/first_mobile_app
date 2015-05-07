@@ -212,8 +212,15 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			double intnum1=Double.parseDouble(num1);
 			double intnum2=Double.parseDouble(num2);
 			double total=intnum1+intnum2;
+			int inttotal=(int)total;
 			String t=String.valueOf(total);
-			tv.setText(t);
+			if(total/inttotal==0){
+				
+					tv.setText(inttotal);
+			}else{
+			
+					tv.setText(t);
+				}
 			}
 		
 	});
