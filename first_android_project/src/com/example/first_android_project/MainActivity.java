@@ -216,6 +216,7 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			dtotal=inttotal;
 			String t=String.valueOf(total);
 			String t2=String.valueOf(inttotal);
+			//----
 			if((total-dtotal)==0){
 				// display integer number if the total are integer
 					tv.setText(t2);
