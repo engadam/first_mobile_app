@@ -193,7 +193,6 @@ public class MainActivity extends Activity {
 			TextView tv=(TextView)findViewById(R.id.num_disp);
 			if(tv.getText()!=""){
 			num1=(String)tv.getText();
-			Toast.makeText(MainActivity.this, num1, Toast.LENGTH_LONG).show();
 			tv.setText("");
 			}
 		}
@@ -212,13 +211,16 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			double intnum1=Double.parseDouble(num1);
 			double intnum2=Double.parseDouble(num2);
 			double total=intnum1+intnum2;
+			double dtotal;
 			int inttotal=(int)total;
+			dtotal=inttotal;
 			String t=String.valueOf(total);
-			if(total/inttotal==0){
-				
-					tv.setText(inttotal);
+			String t2=String.valueOf(inttotal);
+			if((total-dtotal)==0){
+				// display integer number if the total are integer
+					tv.setText(t2);
 			}else{
-			
+				// display double number if the total are double
 					tv.setText(t);
 				}
 			}
