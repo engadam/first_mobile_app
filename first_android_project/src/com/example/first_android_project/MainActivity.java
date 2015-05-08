@@ -396,6 +396,34 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 	 	});
 
 	 
+	//----------------------------------------------------------
+	 
+	 Button dot=(Button) findViewById(R.id.btn_dot);
+	 	 
+	 	 dot.setOnClickListener(new View.OnClickListener() {
+	 		
+	 		@Override
+	 		public void onClick(View v) {
+	 
+	 			TextView tv=(TextView)findViewById(R.id.num_disp);
+	 			String s1=(String)tv.getText();
+	 			String dot=".";
+				if (!(s1.contains("."))){
+					tv.setText(s1+dot);
+					
+				}
+				
+				
+				
+				
+		
+	 			
+	 			
+	 		}
+	 	});
+	 
+ 
+	 
 	 
 	}
 
