@@ -281,7 +281,7 @@ Button sub=(Button) findViewById(R.id.btn_sub);
 		 
 		 Button div=(Button) findViewById(R.id.btn_div);
 		 	 
-		 	 multi.setOnClickListener(new View.OnClickListener() {
+		 	 div.setOnClickListener(new View.OnClickListener() {
 		 		
 		 		@Override
 		 		public void onClick(View v) {
