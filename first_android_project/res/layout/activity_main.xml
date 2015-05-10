@@ -65,7 +65,9 @@
                     android:text="MC"
                     android:id="@+id/button"
                     android:layout_row="0"
-                    android:layout_column="0" />
+                    android:layout_column="0"
+                	
+                	/>"
 
                 <Button
                     android:layout_width="65dp"
@@ -109,12 +111,13 @@
                     android:textSize="15dp" />
 
                 <Button
+                    android:id="@+id/button7"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
-                    android:text="CE"
-                    android:id="@+id/button7"
+                    android:layout_column="1"
                     android:layout_row="1"
-                    android:layout_column="1" />
+                    android:background="@layout/custom_button"
+                    android:text="CE" />
 
                 <Button
                     android:layout_width="65dp"
