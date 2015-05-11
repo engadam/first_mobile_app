@@ -21,22 +21,22 @@
         android:id="@+id/linearLayout">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="113dp"
-            android:weightSum="1">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:weightSum="1" >
 
             <TextView
                 android:id="@+id/num_disp"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
+                android:layout_height="70dp"
                 android:layout_marginBottom="10pt"
                 android:layout_marginLeft="5pt"
                 android:layout_marginRight="10pt"
                 android:layout_marginTop="2pt"
-                android:layout_weight="0.95"
-                android:background="#ffffffff"
+                android:layout_weight="0.88"
+                android:background="@layout/display_custom"
                 android:editable="false"
                 android:singleLine="true"
                 android:textIsSelectable="false"
