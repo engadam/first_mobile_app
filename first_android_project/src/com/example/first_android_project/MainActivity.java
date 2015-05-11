@@ -38,7 +38,11 @@ public class MainActivity extends Activity {
 				
 				String zero="0";
 				String s1=(String)tv.getText();
-				tv.setText(s1+zero);
+				if (!s1.equals("0")){
+					tv.setText(s1+zero);
+					}else {
+						tv.setText(zero);
+					}
 				
 			}
 		});
@@ -58,7 +62,11 @@ public class MainActivity extends Activity {
 				}
 				String one="1";
 				String s1=(String)tv.getText();
-				tv.setText(s1+one);
+				if (!s1.equals("0")){
+					tv.setText(s1+one);
+					}else {
+						tv.setText(one);
+					}
 				
 			}
 		});
@@ -78,7 +86,12 @@ public class MainActivity extends Activity {
 				}
 				String two="2";
 				String s1=(String)tv.getText();
-				tv.setText(s1+two);
+				
+				if (!s1.equals("0")){
+					tv.setText(s1+two);
+					}else {
+						tv.setText(two);
+					}
 				
 			}
 		});
@@ -99,7 +112,12 @@ public class MainActivity extends Activity {
 				String three="3";
 				equal_press=false;
 				String s1=(String)tv.getText();
-				tv.setText(s1+three);
+				
+				if (!s1.equals("0")){
+					tv.setText(s1+three);
+					}else {
+						tv.setText(three);
+					}
 				
 			}
 		});
@@ -121,7 +139,12 @@ public class MainActivity extends Activity {
 				}
 				String four="4";
 				String s1=(String)tv.getText();
-				tv.setText(s1+four);
+				
+				if (!s1.equals("0")){
+					tv.setText(s1+four);
+					}else {
+						tv.setText(four);
+					}
 				
 			}
 		});
@@ -141,9 +164,13 @@ public class MainActivity extends Activity {
 				}
 				String five="5";
 				String s1=(String)tv.getText();
-				tv.setText(s1+five);
 				equal_press=false;
 				
+				if (!s1.equals("0")){
+					tv.setText(s1+five);
+					}else {
+						tv.setText(five);
+					}
 			}
 		});
 
@@ -162,7 +189,12 @@ public class MainActivity extends Activity {
 				}
 				String six="6";
 				String s1=(String)tv.getText();
-				tv.setText(s1+six);
+				
+				if (!s1.equals("0")){
+					tv.setText(s1+six);
+					}else {
+						tv.setText(six);
+					}
 				
 			}
 		});
@@ -181,9 +213,15 @@ public class MainActivity extends Activity {
 				tv.setText("");
 				equal_press=false;
 			}
+			
 			String sevn="7";
 			String s1=(String)tv.getText();
+			
+			if (!s1.equals("0")){
 			tv.setText(s1+sevn);
+			}else {
+				tv.setText(sevn);
+			}
 			
 		}
 	});
@@ -202,7 +240,12 @@ public class MainActivity extends Activity {
 			}
 			String eight="8";
 			String s1=(String)tv.getText();
-			tv.setText(s1+eight);
+			
+			if (!s1.equals("0")){
+				tv.setText(s1+eight);
+				}else {
+					tv.setText(eight);
+				}
 			
 		}
 	});
@@ -220,7 +263,12 @@ public class MainActivity extends Activity {
 			}
 			String nine="9";
 			String s1=(String)tv.getText();
-			tv.setText(s1+nine);
+			
+			if (!s1.equals("0")){
+				tv.setText(s1+nine);
+				}else {
+					tv.setText(nine);
+				}
 			
 		}
 	});
@@ -236,7 +284,7 @@ public class MainActivity extends Activity {
 			TextView tv=(TextView)findViewById(R.id.num_disp);
 			if(tv.getText()!=""){
 			num1=(String)tv.getText();
-			tv.setText("");
+			tv.setText("0");
 			p='+';
 			}
 		}
@@ -253,7 +301,7 @@ Button sub=(Button) findViewById(R.id.btn_sub);
 			TextView tv=(TextView)findViewById(R.id.num_disp);
 			if(tv.getText()!=""){
 			num1=(String)tv.getText();
-			tv.setText("");
+			tv.setText("0");
 			p='-';
 			}
 		}
@@ -271,7 +319,7 @@ Button sub=(Button) findViewById(R.id.btn_sub);
 	 			TextView tv=(TextView)findViewById(R.id.num_disp);
 	 			if(tv.getText()!=""){
 	 			num1=(String)tv.getText();
-	 			tv.setText("");
+	 			tv.setText("0");
 	 			p='*';
 	 			}
 	 		}
@@ -288,7 +336,7 @@ Button sub=(Button) findViewById(R.id.btn_sub);
 		 			TextView tv=(TextView)findViewById(R.id.num_disp);
 		 			if(tv.getText()!=""){
 		 			num1=(String)tv.getText();
-		 			tv.setText("");
+		 			tv.setText("0");
 		 			p='/';
 		 			}
 		 		}
