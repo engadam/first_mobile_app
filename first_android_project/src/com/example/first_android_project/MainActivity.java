@@ -1,5 +1,7 @@
 package com.example.first_android_project;
 
+import java.io.IOException;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -351,11 +353,12 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 		
 		@Override
 		public void onClick(View v) {
-			
-			Toast.makeText(getApplicationContext(), num1+" "+num2, Toast.LENGTH_LONG).show();
-			
+			try{
 			TextView tv=(TextView)findViewById(R.id.num_disp);
 			num2=(String)tv.getText();
+			Toast.makeText(getApplicationContext(), num1+" "+num2, Toast.LENGTH_LONG).show();
+			
+			
 			
 			
 			
@@ -443,13 +446,18 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			
 			p=' ';
 		
+			
+			}catch(Exception name){
+				
+				
 			}
+			
 		
 		}
-		    
+	 
 	 	});
 
-	 
+	
 	//----------------------------------------------------------
 	 
 	 Button dot=(Button) findViewById(R.id.btn_dot);
