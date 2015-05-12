@@ -351,8 +351,14 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 		
 		@Override
 		public void onClick(View v) {
+			
+			Toast.makeText(getApplicationContext(), num1+" "+num2, Toast.LENGTH_LONG).show();
+			
 			TextView tv=(TextView)findViewById(R.id.num_disp);
 			num2=(String)tv.getText();
+			
+			
+			
 			double intnum1=Double.parseDouble(num1);
 			double intnum2=Double.parseDouble(num2);
 			double sum=0;
@@ -439,7 +445,7 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 		
 			}
 		
-		
+		}
 		    
 	 	});
 
