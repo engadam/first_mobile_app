@@ -481,32 +481,36 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 	 
 	 	//----------------------------------------------------------
 		 
-		 Button back=(Button) findViewById(R.id.btn_back);
+		 Button pn=(Button) findViewById(R.id.btn_pn);
 		 	 
-		 	 back.setOnClickListener(new View.OnClickListener() {
+		 	 pn.setOnClickListener(new View.OnClickListener() {
 		 		
 		 		@Override
 		 		public void onClick(View v) {
 		 			TextView tv=(TextView)findViewById(R.id.num_disp);
+		 			
 		 			String txt=(String) tv.getText();
-		 			if(!(tv.length()==1)&&(!(txt.charAt(0)=='-'))){
+		 			if(!(txt.charAt(0)=='-')&&(!(txt.equals("0")))){
 		 			
-		 			String a=txt.substring(0,txt.length()-1);
-		 			tv.setText(a);
-//		 			
+		 				tv.setText("-"+ tv.getText());
 		 			
-		 			
-		 			}else if(!(tv.length()==2)&&((txt.charAt(0)=='-'))){
+		 			}else{
 			 			
-			 			String a=txt.substring(0,txt.length()-1);
+			 			String a=txt.substring(1);
 			 			tv.setText(a);
+			 			
+			 			
+			 			
+			 			
+			 			
 			 			}
 
 		 		}
 		 	});
 		 
-		
+		//---------------------------------------------------------
 	 
+		 	 
 	 
 	}
 
