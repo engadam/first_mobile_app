@@ -481,33 +481,97 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 	 
 	 	//----------------------------------------------------------
 		 
-		 Button pn=(Button) findViewById(R.id.btn_pn);
+		 Button back=(Button) findViewById(R.id.btn_back);
+		 	 
+		 	 back.setOnClickListener(new View.OnClickListener() {
+		 		
+		 		@Override
+		 		public void onClick(View v) {
+		 			
+		 		
+		 			TextView tv=(TextView)findViewById(R.id.num_disp);
+		 			String txt=(String) tv.getText();
+		 		
+		 			
+		 			if (txt.length()==1 ||(txt.charAt(0)=='-'&& txt.length()==2)){
+		 				
+		 				tv.setText("0");
+			 
+			 			
+			 			
+			 		}else if(!(tv.length()==1)&&(!(txt.charAt(0)=='-'))){
+		 			
+		 			String a=txt.substring(0,txt.length()-1);
+		 			tv.setText(a);
+//		 			
+		 			}else{		 			
+		 				String a=txt.substring(0,txt.length()-1);
+			 			tv.setText(a);
+//			 			
+		 			}
+		 			
+		 			
+		 		
+		 			
+		 			
+		 		}
+		 			
+		 		
+		 		
+		 	});
+		 
+//---------------------------------------------------------------------------		 	 
+		 Button pn=(Button) findViewById(R.id.btn_pn);// pulse negative button
 		 	 
 		 	 pn.setOnClickListener(new View.OnClickListener() {
 		 		
 		 		@Override
 		 		public void onClick(View v) {
+		 			try{
 		 			TextView tv=(TextView)findViewById(R.id.num_disp);
 		 			
 		 			String txt=(String) tv.getText();
+		 			
 		 			if(!(txt.charAt(0)=='-')&&(!(txt.equals("0")))){
+		 				
 		 			
 		 				tv.setText("-"+ tv.getText());
 		 			
+		 			}else if((txt.charAt(0)=='-')&&(txt.length()==2)) {
+		 				tv.setText('0');
+		 				
+		 			}else if(txt.equals("0")){
+		 				tv.setText("0");
+		 				
 		 			}else{
 			 			
 			 			String a=txt.substring(1);
 			 			tv.setText(a);
 			 			
 			 			
-			 			
-			 			
-			 			
 			 			}
 
+		 		
+		 		
+		 		
+		 		
 		 		}
+		 		
+		 	 catch(Exception name){
+		 		 
+		 	  }
+		 	 }
+		 		
+		 	 
 		 	});
 		 
+
+		 	 
+		 	 
+		 	 
+		 	 
+		 	 
+		 	 
 		//---------------------------------------------------------
 	 
 		 	 
