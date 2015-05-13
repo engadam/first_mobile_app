@@ -356,7 +356,7 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			try{
 			TextView tv=(TextView)findViewById(R.id.num_disp);
 			num2=(String)tv.getText();
-			Toast.makeText(getApplicationContext(), num1+" "+num2, Toast.LENGTH_LONG).show();
+			
 			
 			
 			
@@ -474,17 +474,38 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 					tv.setText(s1+dot);
 					
 				}
-				
-				
-				
-				
-		
-	 			
+				 			
 	 			
 	 		}
 	 	});
 	 
- 
+	 	//----------------------------------------------------------
+		 
+		 Button back=(Button) findViewById(R.id.btn_back);
+		 	 
+		 	 back.setOnClickListener(new View.OnClickListener() {
+		 		
+		 		@Override
+		 		public void onClick(View v) {
+		 			TextView tv=(TextView)findViewById(R.id.num_disp);
+		 			String txt=(String) tv.getText();
+		 			if(!(tv.length()==1)&&(!(txt.charAt(0)=='-'))){
+		 			
+		 			String a=txt.substring(0,txt.length()-1);
+		 			tv.setText(a);
+//		 			
+		 			
+		 			
+		 			}else if(!(tv.length()==2)&&((txt.charAt(0)=='-'))){
+			 			
+			 			String a=txt.substring(0,txt.length()-1);
+			 			tv.setText(a);
+			 			}
+
+		 		}
+		 	});
+		 
+		
 	 
 	 
 	}
