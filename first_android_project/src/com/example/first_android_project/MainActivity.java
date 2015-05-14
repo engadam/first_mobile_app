@@ -24,6 +24,22 @@ public class MainActivity extends Activity {
 		shownumber();
 	}
 
+	
+	private String displayNumber(double xdouble){
+		String result="";
+		int xint=(int)xdouble;
+		
+		if (xdouble-xint==0){
+			
+			result=String.valueOf(xint);
+			
+		}else{
+			result=String.valueOf(xdouble);
+		}
+		
+		return result;
+	}
+	
 	private void shownumber() {
 		//----------------------------------------------------------
 		 Button b0=(Button) findViewById(R.id.btn_0);
@@ -537,16 +553,15 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 		 			
 		 				tv.setText("-"+ tv.getText());
 		 			
-		 			}else if((txt.charAt(0)=='-')&&(txt.length()==2)) {
-		 				tv.setText('0');
 		 				
 		 			}else if(txt.equals("0")){
 		 				tv.setText("0");
 		 				
-		 			}else{
+		 			}else if((txt.charAt(0)=='-')&&((txt.equals("0")))){
 			 			
 			 			String a=txt.substring(1);
 			 			tv.setText(a);
+			 			
 			 			
 			 			
 			 			}
@@ -565,6 +580,37 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 		 	 
 		 	});
 		 
+		 	//---------------------------------------------------------------------------		 	 
+			 Button sqr=(Button) findViewById(R.id.btn_sqr);// pulse negative button
+			 	 
+			 	 sqr.setOnClickListener(new View.OnClickListener() {
+			 		
+			 		@Override
+			 		public void onClick(View v) {
+			 			try{				 			
+			 				TextView tv=(TextView)findViewById(R.id.num_disp);
+			 				String s=(String)tv.getText();
+			 				double num=Double.parseDouble(s);
+			 				num=Math.sqrt(num);
+			 				tv.setText(displayNumber(num));
+			 				
+			 				
+			 		
+			 		
+			 		
+			 				}
+			 		
+			 	
+			 			catch(Exception name){
+			 				
+			 				
+			 		 
+			 				}
+			 		}
+			 		
+			 	 
+			 	});
+			 
 
 		 	 
 		 	 
