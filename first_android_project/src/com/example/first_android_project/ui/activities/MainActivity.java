@@ -34,16 +34,7 @@ public class MainActivity extends Activity implements OnClickListener
 	private void shownumber()
 	{
 		tvResult = (TextView) findViewById(R.id.num_disp);
-
-		final HorizontalScrollView sView = (HorizontalScrollView) findViewById(R.id.HScrollView);
-		sView.post(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				sView.fullScroll(View.FOCUS_RIGHT);
-			}
-		});
+		tvResult.setMovementMethod(new ScrollingMovementMethod());
 
 		// ----------------------------------------------------------
 		Button b0 = (Button) findViewById(R.id.btn_0);
@@ -54,23 +45,23 @@ public class MainActivity extends Activity implements OnClickListener
 			@Override
 			public void onClick(View v)
 			{
-				// TextView tv = (TextView) findViewById(R.id.num_disp);
-				// if (equal_press == true)
-				// {
-				// tv.setText("");
-				// equal_press = false;
-				// }
-				//
-				// String zero = "0";
-				// String s1 = (String) tv.getText();
-				// if (!s1.equals("0"))
-				// {
-				// tv.setText(s1 + zero);
-				// }
-				// else
-				// {
-				// tv.setText(zero);
-				// }
+				TextView tv = (TextView) findViewById(R.id.num_disp);
+				if (equal_press == true)
+				{
+					tv.setText("");
+					equal_press = false;
+				}
+
+				String zero = "0";
+				String s1 = (String) tv.getText().toString();
+				if (!s1.equals("0"))
+				{
+					tv.setText(s1 + zero);
+				}
+				else
+				{
+					tv.setText(zero);
+				}
 
 			}
 		});
@@ -92,7 +83,7 @@ public class MainActivity extends Activity implements OnClickListener
 					equal_press = false;
 				}
 				String one = "1";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 				if (!s1.equals("0"))
 				{
 					tv.setText(s1 + one);
@@ -122,7 +113,7 @@ public class MainActivity extends Activity implements OnClickListener
 					equal_press = false;
 				}
 				String two = "2";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 
 				if (!s1.equals("0"))
 				{
@@ -153,7 +144,7 @@ public class MainActivity extends Activity implements OnClickListener
 				}
 				String three = "3";
 				equal_press = false;
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 
 				if (!s1.equals("0"))
 				{
@@ -184,7 +175,7 @@ public class MainActivity extends Activity implements OnClickListener
 					equal_press = false;
 				}
 				String four = "4";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 
 				if (!s1.equals("0"))
 				{
@@ -214,7 +205,7 @@ public class MainActivity extends Activity implements OnClickListener
 					tv.setText("");
 				}
 				String five = "5";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 				equal_press = false;
 
 				if (!s1.equals("0"))
@@ -245,7 +236,7 @@ public class MainActivity extends Activity implements OnClickListener
 					equal_press = false;
 				}
 				String six = "6";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 
 				if (!s1.equals("0"))
 				{
@@ -277,7 +268,7 @@ public class MainActivity extends Activity implements OnClickListener
 				}
 
 				String sevn = "7";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 
 				if (!s1.equals("0"))
 				{
@@ -307,7 +298,7 @@ public class MainActivity extends Activity implements OnClickListener
 					equal_press = false;
 				}
 				String eight = "8";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 
 				if (!s1.equals("0"))
 				{
@@ -336,7 +327,7 @@ public class MainActivity extends Activity implements OnClickListener
 					equal_press = false;
 				}
 				String nine = "9";
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 
 				if (!s1.equals("0"))
 				{
@@ -361,9 +352,9 @@ public class MainActivity extends Activity implements OnClickListener
 			public void onClick(View v)
 			{
 				TextView tv = (TextView) findViewById(R.id.num_disp);
-				if (tv.getText() != "")
+				if (tv.getText().toString() != "")
 				{
-					num1 = (String) tv.getText();
+					num1 = (String) tv.getText().toString();
 					tv.setText("0");
 					p = '+';
 				}
@@ -381,9 +372,9 @@ public class MainActivity extends Activity implements OnClickListener
 			public void onClick(View v)
 			{
 				TextView tv = (TextView) findViewById(R.id.num_disp);
-				if (tv.getText() != "")
+				if (tv.getText().toString() != "")
 				{
-					num1 = (String) tv.getText();
+					num1 = (String) tv.getText().toString();
 					tv.setText("0");
 					p = '-';
 				}
@@ -401,9 +392,9 @@ public class MainActivity extends Activity implements OnClickListener
 			public void onClick(View v)
 			{
 				TextView tv = (TextView) findViewById(R.id.num_disp);
-				if (tv.getText() != "")
+				if (tv.getText().toString() != "")
 				{
-					num1 = (String) tv.getText();
+					num1 = (String) tv.getText().toString();
 					tv.setText("0");
 					p = '*';
 				}
@@ -421,9 +412,9 @@ public class MainActivity extends Activity implements OnClickListener
 			public void onClick(View v)
 			{
 				TextView tv = (TextView) findViewById(R.id.num_disp);
-				if (tv.getText() != "")
+				if (tv.getText().toString() != "")
 				{
-					num1 = (String) tv.getText();
+					num1 = (String) tv.getText().toString();
 					tv.setText("0");
 					p = '/';
 				}
@@ -443,7 +434,7 @@ public class MainActivity extends Activity implements OnClickListener
 				try
 				{
 					TextView tv = (TextView) findViewById(R.id.num_disp);
-					num2 = (String) tv.getText();
+					num2 = (String) tv.getText().toString();
 
 					double intnum1 = Double.parseDouble(num1);
 					double intnum2 = Double.parseDouble(num2);
@@ -566,7 +557,7 @@ public class MainActivity extends Activity implements OnClickListener
 			{
 
 				TextView tv = (TextView) findViewById(R.id.num_disp);
-				String s1 = (String) tv.getText();
+				String s1 = (String) tv.getText().toString();
 				String dot = ".";
 				if (!(s1.contains(".")))
 				{
@@ -589,7 +580,7 @@ public class MainActivity extends Activity implements OnClickListener
 			{
 
 				TextView tv = (TextView) findViewById(R.id.num_disp);
-				String txt = (String) tv.getText();
+				String txt = (String) tv.getText().toString();
 
 				if (txt.length() == 1
 						|| (txt.charAt(0) == '-' && txt.length() == 2))
@@ -629,12 +620,12 @@ public class MainActivity extends Activity implements OnClickListener
 				{
 					TextView tv = (TextView) findViewById(R.id.num_disp);
 
-					String txt = (String) tv.getText();
+					String txt = (String) tv.getText().toString();
 
 					if (!(txt.charAt(0) == '-') && (!(txt.equals("0"))))
 					{
 
-						tv.setText("-" + tv.getText());
+						tv.setText("-" + tv.getText().toString());
 
 					}
 					else if (txt.equals("0"))
@@ -673,7 +664,7 @@ public class MainActivity extends Activity implements OnClickListener
 				try
 				{
 					TextView tv = (TextView) findViewById(R.id.num_disp);
-					String s = (String) tv.getText();
+					String s = (String) tv.getText().toString();
 					double num = Double.parseDouble(s);
 					num = Math.sqrt(num);
 					tv.setText(MathUtils.displayNumber(num));

@@ -27,31 +27,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <HorizontalScrollView
-                android:id="@+id/HScrollView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/display_custom"
-                android:fillViewport="true"
-                android:scrollbars="none" >
+                android:gravity="right|center_vertical" >
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/num_disp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="right|center_vertical" >
-
-                    <TextView
-                        android:id="@+id/num_disp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:scrollHorizontally="true"
-                        android:singleLine="true"
-                        android:text="0"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textSize="30sp" />
-                </LinearLayout>
-            </HorizontalScrollView>
+                    android:ellipsize="marquee"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30sp" />
+            </LinearLayout>
         </LinearLayout>
 
         <include layout="@layout/view_cal_nums" />
