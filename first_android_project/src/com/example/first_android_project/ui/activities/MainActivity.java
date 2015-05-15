@@ -1,12 +1,15 @@
 package com.example.first_android_project.ui.activities;
 
 import android.app.Activity;
+import android.app.Application;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.example.first_android_project.Calculator;
 import com.example.first_android_project.R;
 import com.example.first_android_project.utilities.MathUtils;
 
@@ -39,23 +42,23 @@ public class MainActivity extends Activity implements OnClickListener
 			@Override
 			public void onClick(View v)
 			{
-				TextView tv = (TextView) findViewById(R.id.num_disp);
-				if (equal_press == true)
-				{
-					tv.setText("");
-					equal_press = false;
-				}
-
-				String zero = "0";
-				String s1 = (String) tv.getText();
-				if (!s1.equals("0"))
-				{
-					tv.setText(s1 + zero);
-				}
-				else
-				{
-					tv.setText(zero);
-				}
+				// TextView tv = (TextView) findViewById(R.id.num_disp);
+				// if (equal_press == true)
+				// {
+				// tv.setText("");
+				// equal_press = false;
+				// }
+				//
+				// String zero = "0";
+				// String s1 = (String) tv.getText();
+				// if (!s1.equals("0"))
+				// {
+				// tv.setText(s1 + zero);
+				// }
+				// else
+				// {
+				// tv.setText(zero);
+				// }
 
 			}
 		});
@@ -677,49 +680,46 @@ public class MainActivity extends Activity implements OnClickListener
 
 	}
 
-	
-	
-	
 	@Override
 	public void onClick(View v)
 	{
 		switch (v.getId())
 		{
 			case R.id.btn_0:
-				
+
 				break;
 			case R.id.btn_1:
-				
+
 				break;
 			case R.id.btn_2:
-				
+
 				break;
 			case R.id.btn_3:
-				
+
 				break;
 			case R.id.btn_4:
-				
+
 				break;
 			case R.id.btn_5:
-				
+
 				break;
 			case R.id.btn_6:
-				
+
 				break;
 			case R.id.btn_7:
-				
+
 				break;
 			case R.id.btn_8:
-				
+
 				break;
 			case R.id.btn_9:
-				
+
 				break;
 
 			default:
 				break;
 		}
-		
+
 	}
 
 }
