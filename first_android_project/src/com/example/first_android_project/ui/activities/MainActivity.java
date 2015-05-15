@@ -7,6 +7,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.first_android_project.Calculator;
@@ -33,6 +34,17 @@ public class MainActivity extends Activity implements OnClickListener
 	private void shownumber()
 	{
 		tvResult = (TextView) findViewById(R.id.num_disp);
+
+		final HorizontalScrollView sView = (HorizontalScrollView) findViewById(R.id.HScrollView);
+		sView.post(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				sView.fullScroll(View.FOCUS_RIGHT);
+			}
+		});
+
 		// ----------------------------------------------------------
 		Button b0 = (Button) findViewById(R.id.btn_0);
 

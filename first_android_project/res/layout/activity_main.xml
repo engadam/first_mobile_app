@@ -28,22 +28,25 @@
             android:orientation="horizontal" >
 
             <HorizontalScrollView
-                android:id="@+id/ScrollView01"
+                android:id="@+id/HScrollView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/display_custom"
-                android:fillViewport="true" >
+                android:fillViewport="true"
+                android:scrollbars="none" >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical|right" >
+                    android:gravity="right|center_vertical" >
 
                     <TextView
                         android:id="@+id/num_disp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
                         android:text="0"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textSize="30sp" />
