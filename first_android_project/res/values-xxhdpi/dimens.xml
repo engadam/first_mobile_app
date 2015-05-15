@@ -4,7 +4,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- Button Sizes -->
-    <dimen name="buttonWidth">25dp</dimen>
-    <dimen name="buttonHeight">25dp</dimen>
+    <dimen name="buttonWidth">65dp</dimen>
+    <dimen name="buttonHeight">65dp</dimen>
 
 </resources>
