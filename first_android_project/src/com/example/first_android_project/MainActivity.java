@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,14 +59,37 @@ public class MainActivity extends Activity {
 				String s1=(String)tv.getText();
 				if (!s1.equals("0")){
 					tv.setText(s1+zero);
-					}else {
-						tv.setText(zero);
 					}
 				
 			}
 		});
 		
 		//----------------------------------------------------------	
+			//----------------------------------------------------------
+		 Button b00=(Button) findViewById(R.id.btn_00);
+		 
+		 b00.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				TextView tv=(TextView)findViewById(R.id.num_disp);
+				if (equal_press==true){
+					tv.setText("");
+					equal_press=false;
+				}
+				
+				String twozero="00";
+				String s1=(String)tv.getText();
+				if (!s1.equals("0")){
+					tv.setText(s1+twozero);
+					}
+					
+				
+			}
+		});
+		
+		//----------------------------------------------------------	
+
 
 		 Button b1=(Button) findViewById(R.id.btn_1);
 		 
@@ -557,9 +581,9 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 		 			}else if(txt.equals("0")){
 		 				tv.setText("0");
 		 				
-		 			}else if((txt.charAt(0)=='-')&&((txt.equals("0")))){
+		 			}else if((txt.charAt(0)=='-')){
 			 			
-			 			String a=txt.substring(1);
+			 			String a=txt.substring(1,txt.length());
 			 			tv.setText(a);
 			 			
 			 			
@@ -592,19 +616,11 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			 				String s=(String)tv.getText();
 			 				double num=Double.parseDouble(s);
 			 				num=Math.sqrt(num);
-			 				tv.setText(displayNumber(num));
-			 				
-			 				
-			 		
-			 		
-			 		
+			 				tv.setText(displayNumber(num));			
 			 				}
 			 		
 			 	
 			 			catch(Exception name){
-			 				
-			 				
-			 		 
 			 				}
 			 		}
 			 		
@@ -612,7 +628,55 @@ Button eql=(Button) findViewById(R.id.btn_eql);
 			 	});
 			 
 
-		 	 
+			 	//---------------------------------------------------------------------------		 	 
+				 Button overx=(Button) findViewById(R.id.btn_overx);// pulse negative button
+				 	 
+				 overx.setOnClickListener(new View.OnClickListener() {
+				 		
+				 		@Override
+				 		public void onClick(View v) {
+				 			try{				 			
+				 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				 				String s=(String)tv.getText();
+				 				double num=Double.parseDouble(s);
+				 				if(!(num==0)){
+				 				num=1/num;
+				 				}
+				 				tv.setText(displayNumber(num));			
+				 				}
+				 		
+				 	
+				 			catch(Exception name){
+				 				}
+				 		}
+				 		
+				 	 
+				 	});
+				 
+				//---------------------------------------------------------------------------		 	 
+				 ImageButton camel=(ImageButton) findViewById(R.id.btn_camel);// pulse negative button
+				 
+				 
+				 camel.setOnClickListener(new View.OnClickListener() {
+				 
+				 		@Override
+				 		public void onClick(View v) {
+				 			try{				 			
+				 				TextView tv=(TextView)findViewById(R.id.num_disp);
+				 				String s=(String)tv.getText();
+				 				double num=Double.parseDouble(s);
+				 				if(!(num==0)){
+				 					num=1/num;
+				 				}
+				 				tv.setText(displayNumber(num));			
+				 				}
+				 					catch(Exception name){
+				 				}
+				 		}
+				 		
+				 	 
+				 	});
+
 		 	 
 		 	 
 		 	 

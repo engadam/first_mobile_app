@@ -8,8 +8,7 @@
                 android:endColor="#0b0b0b"
                 android:startColor="#3d3d3d"
                 android:angle="270" />
-            <corners
-                android:radius="3dp" />
+            
             <padding
                 android:left="10dp"
                 android:top="10dp"
