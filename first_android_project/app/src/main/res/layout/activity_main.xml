@@ -71,7 +71,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:id="@+id/">
 
                 <Button
                     android:id="@+id/button"
@@ -130,7 +131,7 @@
                     android:textSize="12dp" />
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/btn_ce"
                     android:layout_width="65dp"
                     android:layout_height="65dp"
                     android:layout_column="1"
